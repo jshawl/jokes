@@ -1,6 +1,10 @@
 class JokesController < ApplicationController
   def index
     @jokes = Joke.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @jokes }
+    end
   end
 
   def create
