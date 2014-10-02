@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Joke.create([
+  { setup:'knock knock', punchline:'orange you glad..', laughs:3 },
+  { setup:'why did something', punchline:'the chicken', laughs:2 }
+])
