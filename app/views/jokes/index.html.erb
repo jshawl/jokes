@@ -1,4 +1,15 @@
 <h1>Jokes</h1>
+
+<%= form_for @joke do |f| %>
+  <%= f.label :setup %>
+  <%= f.text_field :setup %>
+  <%= f.label :punchline %>
+  <%= f.text_field :punchline %>
+  <%= f.label :laughs %>
+  <%= f.number_field :laughs %>
+  <button type='submit' class='js-new'> Create New Joke </button>
+<% end %>
 <% @jokes.each do |joke| %>
   <%= joke.setup %>
 <% end %>
+

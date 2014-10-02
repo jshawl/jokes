@@ -14,3 +14,25 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function(){
+  $('form').on('submit', function( event ){
+    event.preventDefault();
+    var data = $(this).serialize();
+    console.log( data );
+    $.ajax({
+      url:'/jokes.json',
+      type:'POST',
+      data: data
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
