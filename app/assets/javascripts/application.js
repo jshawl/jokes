@@ -23,7 +23,11 @@ $(function(){
     $.ajax({
       url:'/jokes.json',
       type:'POST',
-      data: data
+      data: data,
+      success: function( data ){
+	var setup = data.setup;
+	$('body').append( setup );
+      }
     });
   });
 });
